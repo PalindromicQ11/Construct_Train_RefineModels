@@ -1,0 +1,36 @@
+RawModels.py
+#1 import Machine Learning packages
+
+Import time
+From sklearn import {Kneighbors, preprocessing, datasets}
+from sklearn.preprocessing import {MinMaxScaler,NormalizeScaler, StandardScaler, imputer, Cluster, polynomials} 
+from sklearn.metrics import {MeanSquareError, MeanAbsoluteError, R2_Score}
+from sklearn.machineLearning import LinearRegression
+from sklearn.cross_valindation import CrossValidationScore
+from sklearn.SVM import {svc, pca}
+
+
+class TrainData():
+    Xfeatures = df()
+    YTargets = df.loc[' ']
+    x_train, y_train, x_test, y_test = train_test_split(x=' ', y='', test_size= 0.6, state = 0)
+    NormalScaler = NormalizeScaler().fit_transform(x_train)
+    StandardScaler = StandardScare().fit_transorm(y_train)
+    x_score = NormalScaler().fit_score(x_test)
+    
+    
+    Def UnsupervisedTrain():
+    While:
+        @UnsupervisedTrain.wraps()
+        KNN = Neighbors.Kneighbors(k=#)
+    
+    
+    
+    Def SupervisedTrain():
+    While:
+        @SupervisedTrain.wraps()
+        LR = MachineLearing.Linear_Regression()
+        MLR = MachineLearning.Multiple_Regression()
+        
+        
+    
