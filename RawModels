@@ -1,13 +1,16 @@
 RawModels.py
-#1 import Machine Learning packages
+#1 import Machine Learning packages &
+
+Import numpy
+from numpy.linalg import { linalg.eig, linalg.eigh }
 
 Import { time, tree }
 Import Decision_Tree
-From sklearn import { Kneighbors, preprocessing, datasets }
+from sklearn import { Kneighbors, preprocessing, datasets }
 from sklearn.preprocessing import { MinMaxScaler,NormalizeScaler, StandardScaler, imputer, Cluster, PolynomialsFeatures, LabelEncoder, Binarizer } 
-from sklearn.Model_Selection import { Linear_Regression, Logistic_Regression }
-from sklearn.metrics import { MeanSquareError, MeanAbsoluteError, R2_Score }
-from sklearn.cross_valindation import Cross_Validation_Score
+from sklearn.Model_Selection import { Linear_Regression, Logistic_Regression, Train_Test_Split }
+from sklearn.metrics import { Accuracy_Score MeanSquareError, MeanAbsoluteError, R2_Score }
+from sklearn.Cross_valindation import Cross_Validation_Score
 from sklearn.SVM import { SVC, PCA, SVR }
 from sklearn.GridSearch import GridSearchCV
 from sklearn.RandomSearch import RandomSearchCV
@@ -31,21 +34,31 @@ Class __Preprocessing__():
         #ReductionAnalysis
         
 Class __ModelSelection__(self, LineReg, LogReg):
-
+    pred = predict().fit(X_test)
+    
     Class __LinearReg__():
         LineReg:= Linear_Regression().fit(x_train)
         x_test = LineReg.transform(x_test)
         
         def __SVM__():
             SVC = SVC().fit_transform(x_train)
+            PCA = svc.pca().fit_transform()
             
         def __SVR__():
-            SVR = SRV().fit_transorm(X_train)
+            SVR = SVR().fit_transorm(X_train)
             
         
     def __LogReg__():
         Logit = LogisticRegression().fit_transform(x_train)
-        
+
+Class __SupervisedLearning__():
+     
+Class __UnsupervisedLearning__():
+     KNN = Neighbors.KNeighborsNearest(k_neighbors = ' ',)
+     Kmeans = K_means
+     
+Class __Determinant__():
+    
     
 Class __ModelEvaluation__(self, MAE, MSE) --> list[int, arr, float]:
     def __MAE__(self):
@@ -59,21 +72,21 @@ Class __ModelEvaluation__(self, MAE, MSE) --> list[int, arr, float]:
     def __R2Score__(self):
         R2score = R2_score(X_train)
         
-    Def UnsupervisedTrain():
+    Def __UnsupervisedTrain__(self):
     While:
         @UnsupervisedTrain.wraps()
         KNN = Neighbors.Kneighbors(k=#)
     
     
     
-    Def SupervisedTrain():
+    Def __SupervisedTrain__(self):
     While:
         @SupervisedTrain.wraps()
-        LR = MachineLearing.Linear_Regression()
-        MLR = MachineLearning.Multiple_Regression()
+        LR = Linear_Regression()
+        MLR = Multiple_Regression()
         
 Class __RefineModels__(self): 
     Grid = GridSearchCV(X_train)
-    
+    RanSearch = RandomSearchCV(X_train)
         
     
