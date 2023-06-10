@@ -3,9 +3,11 @@ RawModels.py
 
 Import numpy
 from numpy.linalg import { linalg.eig, linalg.eigh }
+from numpy.cov import numpy.cov 
 
 Import { time, tree }
 Import Decision_Tree
+
 from sklearn import { Kneighbors, preprocessing, datasets }
 from sklearn.preprocessing import { MinMaxScaler,NormalizeScaler, StandardScaler, imputer, Cluster, PolynomialsFeatures, LabelEncoder, Binarizer } 
 from sklearn.Model_Selection import { Linear_Regression, Logistic_Regression, Train_Test_Split }
@@ -17,28 +19,37 @@ from sklearn.RandomSearch import RandomSearchCV
 
 
 Class __Preprocessing__():
-    def DimensionReduction()--> list[int, array, vector]:
-       
+      
     def TrainData():
         Xfeatures = df()
         YTargets = df.iloc[' ']
         X_train, Y_train, X_test, Y_test = Train_Test_Split(x=' ', y='', test_size= 0.6, random_state = 0)
     
-    NormalScaler = NormalizeScaler().fit_transform(X_train)
-    StandardScaler = StandardScaler().fit_transorm(Y_train)
- 
+    NormlScaler = NormalizeScaler().fit_transform(X_train)
+    StdScaler = StandardScaler().fit_transorm(Y_train)
     
-    def DimensionReduction():
-        #QuadraticReductionAnalysis
-        #FlexibleReductionAnalysis
-        #ReductionAnalysis
+    ## Decompose dimension with PCA, LDA, RDA, QDA, FDA and RBF KPCA 
+    Class __DimensionReduction__()--> list[int, array, vector]:
+        def PCA(): 
+        PCA = PCA.fit_transform(x_train_pca, y_train)
+        eigenvecs, eigenvals = np.cov(x_train, y_train)
         
-Class __ModelSelection__(self, LineReg, LogReg):
-    pred = predict().fit(X_test)
+        def LDA():
+        
+        def RBF_KPCA():
+        
+        def RDA():
+        
+        def QDA():
+        
+        def FDA(): 
+        
+    Class __ModelSelection__(self, LineReg, LogReg, RandomForest):
+        pred = predict().fit(X_test)
     
-    Class __LinearReg__():
-        LineReg:= Linear_Regression().fit(x_train)
-        x_test = LineReg.transform(x_test)
+        Class __LinearReg__():
+            LineReg:= Linear_Regression().fit(x_train)
+            x_test = LineReg.transform(x_test)
         
         def __SVM__():
             SVC = SVC().fit_transform(x_train)
@@ -48,8 +59,8 @@ Class __ModelSelection__(self, LineReg, LogReg):
             SVR = SVR().fit_transorm(X_train)
             
         
-    def __LogReg__():
-        Logit = LogisticRegression().fit_transform(x_train)
+        def __LogReg__():
+            Logit = LogisticRegression().fit_transform(x_train)
 
 Class __SupervisedLearning__():
      
@@ -89,4 +100,5 @@ Class __RefineModels__(self):
     Grid = GridSearchCV(X_train)
     RanSearch = RandomSearchCV(X_train)
         
+Class __Plots__(x,y, classifier, resolution = #):
     
