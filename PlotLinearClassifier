@@ -24,12 +24,9 @@ Class PlotLinearClassifier (x, y, classifier, resolution = 0.03) --> list[int, s
     aa1, aa2 = np.meshgrid(np.arrange(x1min, x2max, resolution),
                            np.arrange(x2min, x2max, resolution))
    
-    clf = classifier.fit(np.array(aa1))
-    clf = clf.reshape(aa1.shape())
-    
-    x,y = np.arrange(np.array(aa1.ravel(), aa2.ravel())
-    
-    clf.contourf(x, y, classifer, alpha = 0.6, colors = 'navy', edgecolor = 'yellow')
+    clf = classifier.predict(np.array(aa1.ravel(),aa2.ravel())
+    clf = clf.reshape(aa1.shape())    
+    clf.contourf(x, y, classifer, alpha = 0.6, colors = 'navy', edgecolor = 'yellow', cmap= cmap|none)
    
 #III. graph    
    
@@ -38,12 +35,12 @@ Class PlotLinearClassifier (x, y, classifier, resolution = 0.03) --> list[int, s
                 'u 00a09 PalindromicQ production 2023 u')
         for i, q in enumerate(np.unique(y)):
         plt.scatter(x[y==i,0], x=[y==i,1], classifier, alpha = 0.5, 
-                    markers = markers[i], colors = colors[i], label = q, cmap = none|cmap
+                    markers = markers[i], colors = colors[i], label = q, 
                    ).figtext(Figtext).tight_layout()
                    
     Def Make_Circles():               
     #   for i, q in enumerate(np.unique(y)):  
-        x,y = make_circles(np.unique(y), n_samples =, noise = 0.2, factor = 0.3)
+        x,y = make_circles(np.unique(y), random_state = 0, noise = 0.2, factor = 0.3)
         plt.scatter(x=x[y== __super([q]), 0],
                     y=x[y== __super([q]), 1], classifer, alpha = 0.6, 
                     markers = markers[i], colors = colors[i], label = i
@@ -53,7 +50,7 @@ Class PlotLinearClassifier (x, y, classifier, resolution = 0.03) --> list[int, s
      #  for i, q in enumerate(np.unique(y)): 
         set_link_color_pallet(['q'])
         z = linkage(np.unique(x), 'complete')
-        Dendro = Dendrogram(z=z, p=np.unique(y)), truncate_mode = none,
+        Dendro = Dendrogram(z=z, p=np.unique(y)), truncate_mode = none, random_state = 0, 
                  show_leaf_labels = true, 
                  leaf_label_func = [y for y in np.unique(y) if y.dtype == str else y==*range([:y])], rotation = true,
                  orientation = 'right') 
