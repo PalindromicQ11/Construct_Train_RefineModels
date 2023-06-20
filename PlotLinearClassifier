@@ -53,9 +53,10 @@ Class PlotLinearClassifier (x, y, classifier, resolution = 0.03) --> list[int, s
      #  for i, q in enumerate(np.unique(y)): 
         set_link_color_pallet(['q'])
         z = linkage(np.unique(x), 'complete')
-        Dendro = Dendrogram(z=z, p=np.unique(y)), truncate_mode = none, 
-                 leaf_label_func = [y for y in np.unique(y) if y.dtype == str else y==*range([:y])], rotation = boolean,
-                 orientation = 'MTFO') 
+        Dendro = Dendrogram(z=z, p=np.unique(y)), truncate_mode = none,
+                 show_leaf_labels = true, 
+                 leaf_label_func = [y for y in np.unique(y) if y.dtype == str else y==*range([:y])], rotation = true,
+                 orientation = 'right') 
         plt.show().tight_layout()
                     
                     
